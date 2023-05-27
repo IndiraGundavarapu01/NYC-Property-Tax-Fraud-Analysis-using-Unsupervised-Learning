@@ -11,7 +11,6 @@ Dataset Provider: Department of Finance(DOF),
 Dataset Owner: NYC OpenData,
 Dataset Source: https://data.cityofnewyork.us/Housing-Development/Property-Valuation-and-Assessment-Data/rgy2-tti8
 ![image](https://github.com/IndiraGundavarapu01/NYC-Property-Tax-Fraud-Analysis-using-Unsupervised-Learning/assets/113149175/a2c4565d-290e-4e7f-b389-c0c7c649d1fe)
-
 ## Methodology
 
 The methodology used in this data science project follows the following steps:
