@@ -1,28 +1,44 @@
-# NYC-Property-Tax-Fraud-Analysis-using-Unsupervised-Learning
-## Summary
+### 1. Project Title
+**New York Property Tax Fraud Analysis**
 
-The city of New York suspects property tax fraud in the properties. To address this, an algorithm is developed to analyze the data and detect potential anomalies using the NY property dataset of 32 records and about a million rows.
-The focus would be identifying instances where property values don't match their corresponding characteristics, suggesting underpayment of taxes through misrepresentation. By checking these unusual or suspicious patterns in dollar values and comparing the property values with their corresponding characteristics, detects the anomalies that can be used to alert the city to potential cases of tax fraud. In the process, we used an average of metrics generated from two algorithms and ranked them in descending order to understand which property tax has a higher chance of fraud because of their strangeness. This approach can save the city significant time and resources in manually reviewing records and help to identify and prevent tax fraud.
+### 2. Executive Summary
+**Objective:** The primary goal of this project is to analyze the New York Property Tax dataset to identify potential instances of fraud. This involves understanding which rows correspond to fraudulent activity and which do not, utilizing data representing NYC property assessments for calculating property tax and granting eligible properties exemptions or abatements.
 
+**Context:** The analysis was conducted using various data science tools and platforms, including Python for data cleaning and transformation, and various analytical libraries for data analysis.
 
-## Data Description
+### 3. Business Problem
+**Problem Identification:** The specific business challenge addressed in this project is the detection of fraudulent property tax claims in New York City. Identifying fraud is crucial for ensuring the integrity of the tax system and for the fair distribution of tax burdens and exemptions.
 
-Dataset Name : New York Property Valuation and Assessment Data, 
-Dataset Provider: Department of Finance(DOF),
-Dataset Owner: NYC OpenData,
-Dataset Source: https://data.cityofnewyork.us/Housing-Development/Property-Valuation-and-Assessment-Data/rgy2-tti8
-![image](https://github.com/IndiraGundavarapu01/NYC-Property-Tax-Fraud-Analysis-using-Unsupervised-Learning/assets/113149175/a2c4565d-290e-4e7f-b389-c0c7c649d1fe)
+**Business Impact:** Fraudulent property tax claims can lead to significant revenue losses for the city, impacting the funding available for public services. Additionally, undetected fraud can undermine public trust in the tax system and lead to unfair advantages for dishonest property owners.
 
-## Methodology
+### 4. Methodology
+**Data Cleaning & Transformation:** 
+- The dataset consists of 1,070,994 rows and 32 fields, covering the 2010/11 period.
+- Data cleaning involved handling missing values, transforming categorical fields, and scaling numeric fields using logarithmic scales to manage wide value ranges.
 
-The methodology used in this data science project follows the following steps:
+**Analysis Techniques:**
+- Descriptive statistics to understand the distribution and summary metrics of each field.
+- Visualization techniques to identify patterns and anomalies.
+- Regression analysis and clustering to detect outliers and potential fraudulent activities.
 
-1. **Data Collection**: The dataset used in this project was obtained from the NYC OpenData website. It contains information about land and building details such as lot and building size, lot and building front, lot and building depth, land and building value etc. The data was collected over a period of one year in 2010 and comprises 1070994 samples with 32 fields.
+### 5. Skills
+**Tools, Languages, & Software:**
+- Python for data analysis and visualization.
+- Libraries used include Pandas for data manipulation, Matplotlib, and Seaborn for visualization, and Scikit-learn for statistical analysis.
 
-2. **Data Exploration and Preprocessing**: Exploratory data analysis was conducted to gain insights into the dataset. Visualizations and summary statistics were used to understand the distribution of variables and identify potential patterns or correlations. Data cleaning techniques such as Exclusions and Imputation were applied to handle missing values and outliers, ensuring the dataset's quality for further analysis.
+### 6. Results & Business Recommendation
+**Business Impact:** 
+- The findings helped identify several anomalies in property tax data that could indicate fraudulent activity.
+- The analysis provided metrics on the extent of fraud, such as the proportion of properties with suspiciously high exemptions or discrepancies between declared and market values.
 
-3. **Feature Selection and Engineering**: Feature selection techniques, such as Principal Component Analysis and domain knowledge, were utilized to identify the most relevant variables for the analysis. Additionally, feature engineering was performed to create new variables, such as land area, building area and total acreage.
+**Insights:**
+- Certain boroughs showed higher instances of anomalies, particularly in areas with high property values.
+- Visualizations revealed patterns of fraud, such as clusters of properties with unusually high exemptions.
+- Detailed field analysis, such as lot width and depth, building class, and exemption codes, highlighted specific areas prone to fraud.
 
-4. **Algorithm Building**: Two anomaly detection algorithms were used : 1. Minkowski Distance 2. Autoencoder. Scores generated from these are zscaled, averaged and sorted to get the final score.  
-
-5. **Results Interpretation**: The sorted records are the records with high to low strangeness based on the scores.This shows which variables have unusual values. In order to aid with the search of understanding the variables, a heatmap is generated which shows which variables are too large or too small individually and also for the groupings of TAXCLASS and ZIPCODE. The unusual cases are then studied individually and to understand which of the records need further investigation.
+### 7. Next Steps
+**Future Work:**
+- Extend the analysis to include more recent data for a comprehensive temporal analysis.
+- Develop a predictive model to automate fraud detection in real-time.
+- Collaborate with city officials to refine the detection criteria and validate findings with on-the-ground inspections.
+- Implement a system for continuous monitoring and updating of the fraud detection model as new data becomes available.
